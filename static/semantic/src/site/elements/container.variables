@@ -1,0 +1,42 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@maxWidth: 100%;
+
+/* Devices */
+@mobileMinimumGutter: 0em;
+@mobileWidth: auto;
+@mobileGutter: 1em;
+
+@tabletMinimumGutter: (@emSize  * 1);
+@tabletWidth: @tabletBreakpoint;
+@tabletGutter: auto;
+
+@computerMinimumGutter: (@emSize  * 1);
+@computerWidth: @computerBreakpoint;
+@computerGutter: auto;
+
+@largeMonitorMinimumGutter: (@emSize  * 1);
+@largeMonitorWidth: @largeMonitorBreakpoint - (@largeMonitorMinimumGutter) - @scrollbarWidth;
+@largeMonitorGutter: auto;
+
+/* Coupling (Add Negative Margin to container size) */
+@gridGutterWidth: 32px;
+@relaxedGridGutterWidth: 3rem;
+@veryRelaxedGridGutterWidth: 5rem;
+
+@mobileGridWidth: @mobileWidth;
+@tabletGridWidth: ~"calc("@tabletWidth~" + "@gridGutterWidth~")";
+@computerGridWidth: ~"calc("@computerWidth~" + "@gridGutterWidth~")";
+@largeMonitorGridWidth: ~"calc("@largeMonitorWidth~" + "@gridGutterWidth~")";
+
+@mobileRelaxedGridWidth: @mobileWidth;
+@tabletRelaxedGridWidth: ~"calc("@tabletWidth~" + "@relaxedGridGutterWidth~")";
+@computerRelaxedGridWidth: ~"calc("@computerWidth~" + "@relaxedGridGutterWidth~")";
+@largeMonitorRelaxedGridWidth: ~"calc("@largeMonitorWidth~" + "@relaxedGridGutterWidth~")";
+
+@mobileVeryRelaxedGridWidth: @mobileWidth;
+@tabletVeryRelaxedGridWidth: ~"calc("@tabletWidth~" + "@veryRelaxedGridGutterWidth~")";
+@computerVeryRelaxedGridWidth: ~"calc("@computerWidth~" + "@veryRelaxedGridGutterWidth~")";
+@largeMonitorVeryRelaxedGridWidth: ~"calc("@largeMonitorWidth~" + "@veryRelaxedGridGutterWidth~")";

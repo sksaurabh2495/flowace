@@ -1,0 +1,38 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+/*-------------------
+        Grid
+--------------------*/
+
+@columnCount: 12;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : #4021C4;
+@secondaryColor      : #6345DF;
+
+@lightPrimaryColor   : @lightBlue;
+@lightSecondaryColor : @lightBlack;
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground      : #FFFFFF;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+@mobileBreakpoint            : 320px;
+@tabletBreakpoint            : 768px;
+@computerBreakpoint          : 1138px;
+@largeMonitorBreakpoint      : 1138px;
+@widescreenMonitorBreakpoint : 1138px;
+
+
+@gutterWidth: 32px;

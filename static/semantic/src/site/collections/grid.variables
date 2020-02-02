@@ -1,0 +1,17 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*******************************
+            Grid
+*******************************/
+
+@minWidth: 320px;
+
+@gutterWidth: 32px;
+@rowSpacing: 1rem;
+
+@tableWidth: ~"calc(100% + "@gutterWidth~")";
+@columnMaxImageWidth: 100%;
+
+@consecutiveGridDistance: (@rowSpacing / 2);

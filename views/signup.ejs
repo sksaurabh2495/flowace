@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon-16x16.png">
+        <title>Flowace SignUp</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+      <% include partials/navlogin.ejs %>
+      <div class="stackable">
+        <div class="ui grid container">
+          <div class="twelve wide mobile six wide computer centered column">
+             <form class="ui form segment signup" action="/signup" method="POST">
+                <p>Tell Us About Yourself</p>
+                <div class="two fields">
+                  <div class="field">
+                     <label>Name</label>
+                     <input placeholder="Name" name="name" type="text">
+                 </div>
+                 <div class="field">
+                     <label>Department</label>
+                     <select class="ui dropdown" name="department">
+                       <option value="">Department</option>
+                       <% departments.forEach(function(item){     %>
+                            <option value="<%= item.id %>"><%= item.name %></option>
+                        <%    });   %>
+                   </select>
+               </div>
+           </div>
+           <div class="two fields">
+            <div class="field">
+               <label>Email</label>
+               <input type="email" name="email">
+           </div>
+           <div class="field">
+               <label>Password</label>
+               <input type="password" name="password">
+           </div>
+       </div>
+     <div class="inline field">
+        <div class="ui checkbox">
+           <input type="checkbox" name="terms">
+           <label>I agree to the terms and conditions</label>
+       </div>
+   </div>
+   <div class="ui primary submit button">Submit</div>
+   <div class="ui error message"></div>
+</form>
+</div>
+</div>
+</div>
+        <script src="/assets/jquery/jquery.min.js"></script>
+        <script src="/assets/common.js"></script>
+        <script src="/assets/semantic/dist/semantic.js"></script>
+</body>
+</html>

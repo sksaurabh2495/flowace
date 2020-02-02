@@ -1,0 +1,28 @@
+{
+  "name": "flowace",
+  "version": "1.0.0",
+  "description": "Assignment for flowace",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sksaurabh24@bitbucket.org/sksaurabh24/flowace.git"
+  },
+  "keywords": [
+    "Assignment"
+  ],
+  "author": "Saurabh Kumar",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/sksaurabh24/flowace#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.0",
+    "password-hash": "^1.2.2",
+    "socket.io": "^2.2.0"
+  }
+}

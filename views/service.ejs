@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon-16x16.png">
+        <title>Flowace Assignment</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% if(requestData.userData._flowace_departmentId == 1){ %>
+        <% include partials/nav.ejs %>
+        <% } else{ %>
+        <% include partials/nav_admin.ejs %>
+        <% } %>
+        <div class="stackable">
+            <div class="ui grid container">
+                <div class="twelve wide mobile eight wide computer centered column">
+                    <%
+                    if(requestData.pageUri == 'cart' && requestData.length != 0){
+                    %>
+                    <div class="ui primary button place-order" onClick="place_order()">Place Order</div>
+                    <%
+                    }
+                    %>
+                    <div id="messages" class="messages">
+                        <% for(var i = 0; i < requestData.length; i++){
+                            if(requestData.pageUri == 'cart' || (requestData.pageUri == 'orders' && requestData[i].status != 2)){
+                        %>
+                        <div id="request-<%=  requestData[i].id  %>" class="message-box"><span class="msg-name1"><%=  requestData[i].productName  %></span> 
+                        <div class="msg-text"><%=  requestData[i].productPrice  %></div>
+                        <% if(requestData[i].status == 0){requestData[i].status2="Confirmed";} if(requestData[i].status == 1){requestData[i].status2="Pending";} if(requestData[i].status == -1){requestData[i].status2="Sold Out";} %>
+                        <div class="msg-status"><%=  requestData[i].status2  %></div>
+                        <% if(requestData[i].status == 1 && requestData.userData._flowace_departmentId == 2){ %>
+                            <button class="ui positive button action-btn" onclick="accept_request(this);">Accept</button>
+                            <button class="ui negative button action-btn" onclick="reject_request(this);">Reject</button>
+                        <% } %>
+                        <%
+                            }
+                        %>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="userData" pageuri="<%= requestData.pageUri %>" uid="<%= requestData.userData._flowace_id %>" did="<%= requestData.userData._flowace_departmentId %>" ></div>
+        <script src="/assets/jquery/jquery.min.js"></script>
+        <script src="/assets/service.js"></script>
+        <script src="/assets/semantic/dist/semantic.js"></script>
+        <script src="/assets/socket.io/socket.io.js"></script>
+    </body>
+</html>

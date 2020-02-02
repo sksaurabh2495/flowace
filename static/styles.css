@@ -1,0 +1,81 @@
+.nav-bar{
+	padding: 24px;
+	background: #4021c4;
+}
+.nav-bar .nav-bg{
+	display: flex;
+	font-size: 22px;
+	color: #FFF;
+	margin: 0px;
+}
+.nav-bar .nav-bg li{
+	list-style: none;
+	padding: 0px 8px;
+}
+.nav-bar .nav-bg li a{
+	color: #FFF;
+}
+.nav-bar .nav-bg li img{
+	width: 100px;
+}
+.nav-bar .nav-bg .nav-text{
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.ml-auto{
+	margin-left: auto;
+}
+.jc-center{
+	justify-content: center;
+}
+.signup, .login, .request-from, .messages{
+	margin-top: 3em !important;
+}
+
+.message-box{
+	margin-bottom: 10px;
+    font-size: 16px;
+    background: ghostwhite;
+    padding: 30px;
+    border: 1px;
+    border-style: solid;
+    border-color: gainsboro;
+    border-radius: 4px;
+    color: dimgray;
+}
+.msg-name1, .msg-name2{
+	color: cornflowerblue;
+}
+.dept-name1, .dept-name2{
+	color: navy;
+}
+.msg-text{
+	color: #333333;
+	margin-top: 8px;
+    font-size: 14px;
+}
+.action-btn{
+	margin-top: 22px !important;
+}
+.product-item{
+	background: whitesmoke;
+    padding: 20px;
+    margin-bottom: 2px;
+}
+.product-item .title{
+	font-weight: 600;
+    font-size: 22px;
+}
+.product-item .description{
+	color: steelblue;
+	margin: 8px 0px;
+}
+.product-item .price{
+	color: red;
+}
+.product-item .footer{
+	margin-top: 10px;
+}
+.place-order{
+	margin-top: 2em !important;
+}

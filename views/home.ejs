@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon-16x16.png">
+        <title>Flowace Assignment</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <% include partials/nav.ejs %>
+        <div class="stackable">
+            <div class="ui grid container">
+                <div class="twelve wide mobile eight wide computer centered column" id="product-feed">
+                </div>
+            </div>
+        </div>
+        <div id="userData" uid="<%= userData._flowace_id %>" did="<%= userData._flowace_departmentId %>" ></div>
+
+        <script src="/assets/jquery/jquery.min.js"></script>
+        <script src="/assets/home.js"></script>
+        <script src="/assets/semantic/dist/semantic.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon-16x16.png">
+        <title>Flowace Login</title>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/semantic/dist/semantic.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+      <% include partials/navlogin.ejs %>
+      <div class="stackable">
+        <div class="ui grid container">
+          <div class="twelve wide mobile six wide computer centered column">
+             <form class="ui form segment login" action="/login" method="POST">
+                <p>Enter your credentials</p>
+            <div class="field">
+               <label>Email</label>
+               <input type="email" name="email">
+           </div>
+           <div class="field">
+               <label>Password</label>
+               <input type="password" name="password">
+           </div>
+   <div class="ui primary submit button">Login</div>
+   <div class="ui error message" style="<% if(locals.message){ %> display:block; <% } %>">
+    <%
+      if(locals.message){
+        %>
+        <%=  message  %>
+        <%
+      }
+    %>
+   </div>
+   <a href="/signup">New User? Create Account</a>
+</form>
+</div>
+</div>
+</div>
+        <script src="/assets/jquery/jquery.min.js"></script>
+        <script src="/assets/common.js"></script>
+        <script src="/assets/semantic/dist/semantic.js"></script>
+</body>
+</html>
